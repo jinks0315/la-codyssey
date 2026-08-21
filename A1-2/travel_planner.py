@@ -259,11 +259,12 @@ def main():
     )
 
     parser.add_argument(
-        "--date",
-        required=True,
-        help='여행 날짜 YYYY-MM-DD'
+    "-date",
+    "--date",
+    dest="date",
+    required=True,
+    help='여행 날짜 YYYY-MM-DD'
     )
-
     args = parser.parse_args()
 
 

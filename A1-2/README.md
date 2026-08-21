@@ -72,12 +72,14 @@ KAKAO_API_KEY=YOUR_KAKAO_REST_API_KEY
 다음과 같이 여행 날짜를 `YYYY-MM-DD` 형식으로 입력하여 프로그램을 실행합니다.
 
 ```bash
+python travel_planner.py -date "2026-09-15"
 python travel_planner.py --date "2026-09-15"
 ```
 
 가상환경의 Python을 직접 사용하는 경우:
 
 ```bash
+.venv/bin/python travel_planner.py -date "2026-09-15"
 .venv/bin/python travel_planner.py --date "2026-09-15"
 ```
 
