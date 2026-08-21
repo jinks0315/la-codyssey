@@ -125,6 +125,39 @@ def show_by_category():
     print(f"\n총 {len(filtered_prompts)}개의 프롬프트")
 
 
+def search_prompt():
+    print("\n=== 프롬프트 검색 ===")
+
+    keyword = get_non_empty_input("검색어: ").lower()
+
+    results = []
+
+    for prompt in prompts:
+        title = prompt["title"].lower()
+        content = prompt["content"].lower()
+
+        if keyword in title or keyword in content:
+            results.append(prompt)
+
+    if not results:
+        print("검색 결과가 없습니다.")
+        return
+
+    print("\n검색 결과:")
+
+    for index, prompt in enumerate(results, start=1):
+        favorite_mark = " ⭐" if prompt["favorite"] else ""
+
+        print(
+            f"{index}. "
+            f"[{prompt['category']}] "
+            f"{prompt['title']}"
+            f"{favorite_mark}"
+        )
+
+    print(f"\n{len(results)}개의 프롬프트를 찾았습니다.")
+
+
 def show_menu():
     print("\n=== 프롬프트 관리 프로그램 ===")
     print("1. 프롬프트 추가")
@@ -152,11 +185,14 @@ def main():
         elif choice == "3":
             show_by_category()
 
+        elif choice == "4":
+            search_prompt()
+
         elif choice == "8":
             print("프로그램을 종료합니다.")
             break
 
-        elif choice in ["4", "5", "6", "7"]:
+        elif choice in ["5", "6", "7"]:
             print("아직 구현되지 않은 기능입니다.")
 
         else:
