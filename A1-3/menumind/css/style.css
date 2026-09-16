@@ -1,0 +1,332 @@
+/* =========================
+   기본 설정
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, "Apple SD Gothic Neo", sans-serif;
+    color: #222;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   상단 메뉴
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    background: white;
+    border-bottom: 1px solid #eeeeee;
+    z-index: 100;
+}
+
+nav {
+    max-width: 1100px;
+    height: 70px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 20px;
+}
+
+nav h1 {
+    font-size: 24px;
+    color: #ff7043;
+}
+
+nav div {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff7043;
+}
+
+
+/* =========================
+   메인 화면
+========================= */
+
+#home {
+    min-height: 600px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background: #fff8f4;
+}
+
+#home h2 {
+    font-size: 52px;
+    line-height: 1.25;
+    margin-bottom: 25px;
+}
+
+#home p {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 35px;
+}
+
+#home > a {
+    display: inline-block;
+
+    padding: 15px 28px;
+
+    background: #ff7043;
+    color: white;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+#home > a:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   AI 추천 영역
+========================= */
+
+#recommend {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+#recommend > h2 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+#recommend > p {
+    text-align: center;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+#recommend > div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+textarea,
+select {
+    width: 100%;
+    padding: 15px;
+
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+textarea:focus,
+select:focus {
+    outline: 2px solid #ffb59e;
+    border-color: #ff7043;
+}
+
+
+/* =========================
+   AI 추천 버튼
+========================= */
+
+#recommendButton {
+    margin-top: 20px;
+
+    padding: 16px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #ff7043;
+    color: white;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#recommendButton:hover {
+    background: #f45d30;
+}
+
+
+/* =========================
+   AI 결과
+========================= */
+
+#result {
+    margin-top: 35px !important;
+    padding: 25px;
+
+    background: #fff8f4;
+
+    border: 1px solid #ffe0d5;
+    border-radius: 12px;
+}
+
+#result h3 {
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   이용방법
+========================= */
+
+#how {
+    padding: 100px 20px;
+    background: #f7f7f7;
+}
+
+#how > h2 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 50px;
+}
+
+#how > div {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+#how article {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 12px;
+}
+
+#how article h3 {
+    color: #ff7043;
+    font-size: 30px;
+}
+
+#how article h4 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+#how article p {
+    color: #666;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    text-align: center;
+    padding: 30px;
+
+    color: #888;
+    border-top: 1px solid #eeeeee;
+}
+
+
+/* =========================
+   모바일 반응형
+========================= */
+
+@media (max-width: 700px) {
+
+    nav {
+        height: auto;
+        padding: 18px 20px;
+
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav div {
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    #home {
+        min-height: 520px;
+    }
+
+    #home h2 {
+        font-size: 36px;
+    }
+
+    #home p {
+        font-size: 17px;
+    }
+
+    #recommend > h2,
+    #how > h2 {
+        font-size: 30px;
+    }
+
+    #how > div {
+        grid-template-columns: 1fr;
+    }
+
+}
+.ai-result {
+    margin-top: 15px;
+    line-height: 1.9;
+    white-space: normal;
+}
+
+#recommendButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
