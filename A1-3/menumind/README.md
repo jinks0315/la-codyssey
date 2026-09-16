@@ -145,13 +145,11 @@ GitHub의 `main` 브랜치에 코드를 Push하면 Vercel에서 자동으로 새
 
 배포 환경에서는 정적 프론트엔드와 `/api/recommend` Python Serverless Function이 함께 동작합니다.
 
-## 11. 배포 URL
+### 11. 배포 URL
 
 MenuMind Vercel 배포 주소:
 
-```text
 https://la-codyssey.vercel.app
-```
 
 ## 12. 개발 과정에서 학습한 내용
 
